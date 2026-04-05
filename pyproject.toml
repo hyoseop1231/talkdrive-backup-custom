@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kakao-backup"
+version = "1.0.0"
+description = "KakaoTalk TalkCloud backup & data extraction toolkit"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31",
+    "websockets>=12.0",
+    "aiohttp>=3.9",
+    "neo4j>=5.0",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+decrypt = [
+    "pysqlcipher3>=1.2",
+]
+dev = [
+    "ruff>=0.4",
+    "pytest>=8.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["kakao_backup*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]

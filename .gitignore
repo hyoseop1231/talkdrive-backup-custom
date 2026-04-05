@@ -1,0 +1,27 @@
+# Data & backups
+backups/
+data/
+*.json
+!pyproject.toml
+
+# Credentials
+.env
+drive.kakao.com_cookies.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
